@@ -1,29 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2
 {
-        public class Primenum
+    public class PrimeCheck
+    {
+        public static void Run()
         {
-            public bool Isprime(int x)
+            Console.Write("Enter a number to check if it is prime: ");
+            int num = int.Parse(Console.ReadLine());
+
+            if (num <= 1)
             {
-                if (x < 2)
-                {
-                    return false;
-                }
+                Console.WriteLine($"{num} is not a prime number.");
+                return;
+            }
 
-                for (int i = 2; i * i <= x; i++)
+            bool isPrime = true;
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
                 {
-                    if (x % i == 0)
-                    {
-                        return false;
-
-                    }
+                    isPrime = false;
+                    break;
                 }
-                return true;
+            }
+
+            if (isPrime)
+            {
+                Console.WriteLine($"{num} is a prime number.");
+            }
+            else
+            {
+                Console.WriteLine($"{num} is not a prime number.");
             }
         }
     }
+}
