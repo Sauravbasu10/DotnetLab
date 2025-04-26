@@ -11,8 +11,8 @@ namespace Lab2
             while (continueProgram)
             {
                 Console.Clear();
-                Console.WriteLine("Select a program to run:");
-                Console.WriteLine("1. Print Hello and Name");
+                    Console.WriteLine("Select a program to run:");
+                    Console.WriteLine("1. Print Hello and Name");
                 Console.WriteLine("2. Swap Two Numbers");
                 Console.WriteLine("3. Find Largest of Three Numbers");
                 Console.WriteLine("4. Check Even or Odd");
